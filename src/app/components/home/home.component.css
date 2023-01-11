@@ -1,0 +1,167 @@
+/*** INTRO SECTION ***/
+
+#my-intro-section {
+    background-image: url("../../../assets/Resursi/flowerBackground1.jpg");
+    min-height: 550px;
+    background-position: bottom;
+    background-size: cover;
+    text-align: center;
+    padding-top: 40px;
+    color: #090a61;
+  }
+
+  #my-intro-section-wrapper {
+    margin-top: 120px;
+    margin-right: 70px;
+  }
+
+  #my-intro-section-wrapper h1 {
+    font-size: 38px;
+    color: rgb(34, 31, 32);
+  }
+
+  #my-intro-section-wrapper p {
+    font-size: 16px;
+    color: rgb(34, 31, 32);
+  }
+
+  #my-intro-section-wrapper button {
+    font-size: 14px;
+  }
+
+/*** TEXT SECTION ***/
+
+  #my-text-section {
+    font-size: 15px;
+    width: 750px;
+    max-width: 95%;
+  }
+
+/*** CATALOG SECTION ***/
+
+  #my-catalog-section * {
+    font-size: 21px;
+  }
+
+  #my-loadButton {
+    font-size: 15px !important;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+/*** FORM SECTION ***/
+
+  #my-info-left * {
+    font-size: 15px;
+  }
+
+  #my-form-right * {
+    font-size: 15px;
+  }
+
+  .example-form {
+    min-width: 150px;
+    max-width: 800px;
+    width: 100%;
+  }
+
+  .example-full-width {
+    width: 100%;
+  }
+
+  .my-input * {
+    padding: 0;
+    margin: 0;
+  }
+
+  /* setting/changing some input properties */
+      ::ng-deep .mat-form-field-wrapper{
+        margin-bottom: -0.7em;
+      }
+    
+      ::ng-deep .mat-focused .mat-form-field-label {
+        color: black !important;
+        margin-top: 4px !important;
+      }
+    
+      ::ng-deep.mat-form-field-underline {
+        background-color: black !important;
+      } 
+      
+      ::ng-deep.mat-form-field-ripple {
+        background-color: black !important;
+      }  
+    
+      ::ng-deep .mat-form-field-label{
+        color:black !important;
+        padding-left: 8px;
+        top: 1.3em !important;   
+      }
+
+      ::ng-deep .mat-form-field-infix > input {
+        padding-left: 8px !important;
+        margin-bottom: 3px !important;
+
+      }
+
+      ::ng-deep .mat-form-field-infix > p {
+        padding-left: 8px !important;
+        margin-bottom: 3px !important;
+
+      }
+
+      ::ng-deep .mat-form-field-infix > span > label {
+        padding-left: 8px !important;
+        margin-bottom: 3px !important;
+
+      }
+
+      ::ng-deep .mat-form-field-infix > textarea {
+        padding-left: 8px !important;
+        margin-bottom: 5px !important;
+      }
+
+  #my-subscribeNow-button {
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+/*** GIFT SECTION ***/
+
+  #my-gift-left {
+    background-color: rgb(254, 174, 183);
+    height: 400px;
+    margin: auto;
+  }
+  
+  #my-gift-left * {
+    color: white;
+  }
+
+  #my-gift-left h1 {
+    font-size: 30px;
+  }
+
+  #my-gift-left p {
+    font-size:  17px;
+  }
+
+  #my-gift-left button {
+    font-size: 14px;
+  }
+
+  #my-gift-right {
+    background-image: url("../../../assets/Resursi/FTD_SplitBanner_Merx_1.png");
+    min-height: 350px;
+    background-position: bottom;
+    background-size: cover;
+    text-align: center;
+    padding-top: 40px;
+    color: #090a61;
+    height: 400px;
+  }
+
+
+
