@@ -1,0 +1,168 @@
+<!-- INTRO SECTION -->
+
+<section class="container-fluid">
+  <div class="row">
+      <div class="col-12 p-0 m-0">
+          <section class="text-end" id="my-intro-section">
+            <div id="my-intro-section-wrapper">
+                <h1 class="fw-bold">March into Spring!</h1>
+                <p class="m-2">Bring a meadow to them with a daisy bucquet.</p>
+                <button class="btn btn-secondary rounded-1 py-1 px-2" routerLink="/shop">SHOP FLOWERS</button>
+            </div>
+          </section>
+      </div>
+  </div>
+</section>
+
+<!-- TEXT SECTION -->
+
+<section class="container m-3 mx-auto" id="my-text-section">
+  <div class="row">
+      <div class="col-12 mt-3 d-flex justify-content-center mx-auto">
+          <div>
+              <p>
+                  Established in 1910, FTD has been a primer provider of beautiful floral arrangements and gorgeous mixed flower bouquets for over 100 years. 
+                  Whatever the occasion, our evergreen collection of colorful stems, blossoming plants, and fragant arrangements have warmed hearts all across the country with our flower delivery services.
+                  At FTD, we celebrate the little things in life and cherish the timeless charm a singles flower embodies. 
+                  From birthday flowers to sympathy flowers, all of our hand-picked flower arrangements are worth more than a thousand words.
+              </p>
+              <p>
+                  Our sprawling network of florists is chock-full of expert green thumbs with an eye for elegance and perfection. 
+                  As one of the largest and most trusted online floral retailers in the world, we take immense pride in our industry-leading title.
+                  Delivering quality, innovation, creative aristry, and dependability, FTD is much more than just an online flower delivery service.
+              </p>
+          </div>
+      </div>
+  </div>
+</section>
+
+<!-- CATALOG SECTION -->
+
+<section class="container text-center mt-3" id="my-catalog-section">
+  <div class="row">
+      <div class="col-lg-3 col-md-6 col-12 text-center py-0 px-2 m-0">
+          <img src="../../../assets/Resursi/flower1.jpeg" alt="" class="img-fluid">
+          <p class="home-third-span m-0 mt-1 mb-2">Fiesta Bouquet</p>
+          <p class="m-0 mb-2">$60</p>
+      </div>
+      <div class="col-lg-3 col-md-6 col-12 text-center py-0 px-2 m-0">
+          <img src="../../../assets/Resursi/flower2.jpeg" alt="" class="img-fluid">
+          <p class="home-third-span m-0 mt-1 mb-2">Alluring Elegance Bouquet</p>
+          <p class="m-0 mb-2">$72</p>
+      </div>
+      <div class="col-lg-3 col-md-6 col-12 text-center py-0 px-2 m-0">
+          <img src="../../../assets/Resursi/flower3.jpeg" alt="" class="img-fluid">
+          <p class="home-third-span m-0 mt-1 mb-2">Beyond Blue Bouquet</p>
+          <p class="m-0 mb-2">$55</p>
+      </div>
+      <div class="col-lg-3 col-md-6 col-12 text-center py-0 px-2 m-0">
+          <img src="../../../assets/Resursi/flower4.jpeg" alt="" class="img-fluid">
+          <p class="home-third-span m-0 mt-1 mb-2">Mixed Roses</p>
+          <p class="m-0 mb-2">$35</p>
+      </div>
+      <div class="col-lg-3 col-md-6 col-12 text-center py-0 px-2 m-0">
+          <img src="../../../assets/Resursi/flower5.jpeg" alt="" class="img-fluid">
+          <p class="home-third-span m-0 mt-1 mb-2">Belle of the Ball Bouquet</p>
+          <p class="m-0 mb-2">$45</p>
+      </div>
+      <div class="col-lg-3 col-md-6 col-12 text-center py-0 px-2 m-0">
+          <img src="../../../assets/Resursi/flower6.jpeg" alt="" class="img-fluid">
+          <p class="home-third-span m-0 mt-1 mb-2">Rainbow Garden</p>
+          <p class="m-0 mb-2">$50</p>
+      </div>
+      <div class="col-lg-3 col-md-6 col-12 text-center py-0 px-2 m-0">
+          <img src="../../../assets/Resursi/flower7.jpeg" alt="" class="img-fluid">
+          <p class="home-third-span m-0 mt-1 mb-2">Best Day Bouquet</p>
+          <p class="m-0 mb-2">$61</p>
+      </div>
+      <div class="col-lg-3 col-md-6 col-12 text-center py-0 px-2 m-0">
+          <img src="../../../assets/Resursi/flower8.jpeg" alt="" class="img-fluid">
+          <p class="home-third-span m-0 mt-1 mb-2">Smiles & Sunshine</p>
+          <p class="m-0 mb-2">$45</p>
+      </div>
+  </div>
+  <button class="btn btn-outline-secondary m-3 px-2 rounded-1" id="my-loadButton" routerLink="/shop">Load More</button>
+</section>
+
+<!-- FORM SECTION -->
+
+<section class="container mt-2">
+  <div class="row">
+    <!-- LEFT PART (INFO) -->
+    <div class="col-lg-5 col-md-5 col-sm-12" id="my-info-left">
+      <p class="mb-2">Send us a message<br/>A: Laze Nancica 7, 21000 Novi Sad</p>
+      <p class="mb-2">T: 021/422-022</p>
+      <p class="mb-4">office@smartinit.net</p>
+      <p class="mb-2">MON-FRI: 7am - 10pm</p>
+      <p class="mb-2">SATURDAY: 8am - 10pm</p>
+      <p class="mb-4">SUNDAY: -</p>
+      <p class="mb-2">FAQ /</p>
+      <p class="mb-2">Shipping & Returns /</p>
+      <p class="mb-2">Store Policy /</p>
+      <p class="mb-2">Payment Methods /</p>
+    </div>
+    <!-- RIGHT PART (USER DATAS) -->
+    <div class="col-lg-7 col-md-7 col-sm-12 pb-2 mt-lg-3 mt-md-3 mt-sm-0" id="my-form-right">
+      <form class="example-form text-center" (ngSubmit)="onSubmit()" #myForm="ngForm">
+        <!-- NAME & EMAIL -->
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-sm-12">
+            <mat-form-field class="example-full-width my-0 py-0 col-6 my-input">
+              <input matInput placeholder="Name" class="mb-1 col-6" ngModel name="name" required minlength="3" #name="ngModel">
+              <p class="my-error-red my-1" *ngIf="!name.valid && name.touched">
+                <ng-container *ngIf="name.errors?.['required']">Name is required.</ng-container>
+                <ng-container *ngIf="name.errors?.['minlength']">Name must contains at least 3 characters.</ng-container>
+              </p>
+            </mat-form-field>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-12">
+            <mat-form-field class="example-full-width my-0 py-0 col-6 my-input">
+              <input matInput placeholder="Email" class="mb-1 col-6" ngModel name="email" required email #email="ngModel">
+              <p class="my-error-red my-1" *ngIf="!email.valid && email.touched">
+                <ng-container *ngIf="email.errors?.['required']">Email is required.</ng-container>
+                <ng-container *ngIf="!email.errors?.['required']">Email format needs to be valid.</ng-container>
+              </p>
+            </mat-form-field>
+          </div>
+        </div>
+        <!-- SUBJECT -->
+        <mat-form-field class="example-full-width my-0 py-0 my-input">
+          <input matInput placeholder="Subject" class="mb-1" ngModel name="subject">
+        </mat-form-field>
+        <br/>
+        <!-- MESSAGE -->
+        <mat-form-field class="example-full-width">
+          <textarea matInput placeholder="Message" class="mb-2" ngModel name="textarea"></textarea>
+        </mat-form-field>
+        <br/>
+        <!-- SUBMIT BUTTON -->
+        <button class="btn btn-outline-dark rounded-1 my-black-Button" type="submit" [disabled]="!myForm.valid">SEND</button>
+      </form>
+      <br/>
+      <!-- NEWSLETTERS EXTRA PART -->
+      <label for="my-subscribeNow-button" class="mb-1">Get our newsletters</label><br/>
+      <input id="my-subscribeNow-button" class="border border-dark col-lg-6 col-md-6 col-sm-12 me-2 my-2" placeholder="Enter your email here">
+      <button class="btn btn-dark rounded-1 my-black-Button">Subscribe Now</button>
+    </div>
+  </div>
+</section>
+
+<!-- GIFT SECTION -->
+
+<section class="container-fluid">
+  <div class="row">
+    <div class="text-center col-lg-6 col-md-6 col-sm-12 align-middle" id="my-gift-left">
+      <div class="d-flex flex-column h-100 align-items-center justify-content-center p-lg-1 p-md-1 p-sm-3">
+        <h1>Send Get Well Wishes</h1>
+        <p>Brighten their recovery with beautiful florals, plants and gifts that will express your well wishes.</p>
+        <button class="btn btn-secondary py-0 px-1 rounded-3 fw-bold" routerLink="/shop">SHOP GET WELL FLOWERS & GIFTS</button>
+      </div>
+    </div> 
+    <section class="text-end col-lg-6 col-md-6 col-sm-12" id="my-gift-right"></section>
+  </div>
+</section>
+
+
+
+
+
