@@ -11,13 +11,15 @@ import { FormsModule } from '@angular/forms';
 /* Module for Angular Material */
 import { MaterialModule } from './material.module';
 import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    HeaderComponent
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
