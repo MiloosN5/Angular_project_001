@@ -10,12 +10,14 @@ import { FormsModule } from '@angular/forms';
 
 /* Module for Angular Material */
 import { MaterialModule } from './material.module';
+import { HeaderComponent } from './components/header/header.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

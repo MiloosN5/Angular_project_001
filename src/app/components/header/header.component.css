@@ -1,0 +1,51 @@
+/* NAVBAR DIVISION - left & right parts */
+#my-nav-left {
+    width: 65%;
+}
+
+#my-nav-right {
+    width: 35%;
+}
+
+/* set some properties */
+#my-navbar {
+    min-height: 45px;
+    height: auto;
+}
+
+#my-list, #my-loginHeader {
+    font-size: 16px;
+}
+
+/* set the hamburger menu button */
+#my-nav-button {
+    height: 1.25em !important;
+    line-height: 0 !important;
+}
+
+#my-nav-hamburgermenu {
+    width: 20px !important;
+    height: 1.15em !important;
+    line-height: 0 !important;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(111, 112, 116, 1)' stroke-width='4' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+/* set the badge */
+.mat-badge-content {
+    background: gray;
+    color: white;
+    width: 18px !important;
+    height: 18px !important;
+    font-size: 12px !important;
+    right: 6px !important;
+    top: -6px !important;
+    position: relative !important;
+    font-weight: normal !important;
+}
+
+/* responsive for small and middle devices */
+@media (max-width: 991px) {
+    #my-nav-right {
+        width: auto;
+    }
+}
