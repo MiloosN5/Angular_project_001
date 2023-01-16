@@ -1,0 +1,11 @@
+#my-sidenav {
+    height: 180px;
+    position: fixed;
+    box-shadow: unset !important;
+    background-color: white; 
+    width: 35px;
+}
+
+.sizeIcon {
+    font-size: 20px;
+}
