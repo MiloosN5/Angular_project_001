@@ -6,3 +6,24 @@
         font-family: 'Roboto', sans-serif;
     }
 
+/* get rid of sidebar shading */
+.mat-drawer-shown {
+    visibility: hidden! important;
+}
+
+/* black button for HomeComponent */
+.my-black-Button {
+    font-size: 15px !important;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+/* add error message to warn user about problem - make it red */
+  
+.my-error-red {
+    color: red;
+    padding-left: 8px !important; 
+    font-size: 10px;
+  }
