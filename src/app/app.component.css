@@ -1,4 +1,7 @@
-
+/* set the whole content to be 100% of the viewport height */
+#my-main-content {
+    height: 100vh;
+}
 
 
 
