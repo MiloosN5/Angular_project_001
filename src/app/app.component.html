@@ -1,12 +1,21 @@
 <mat-sidenav-container>
     <mat-sidenav-content>
-        <app-header></app-header>
-        <app-home></app-home>
-        <app-footer></app-footer>
+        <!-- CONTENT -->
+        <div class="d-flex flex-column" id="my-main-content">
+            <!-- HEADER (avaiable on the all routes)-->
+            <app-header></app-header>
+            <!-- MAIN CONTENT -->
+            <div class="flex-grow-1">
+                <!-- INSERT COMPONENT depending on the route's name -->
+                <router-outlet></router-outlet>
+            </div>
+            <!-- FOOTER (avaiable on the all routes)-->
+            <app-footer></app-footer>
+        </div>
     </mat-sidenav-content>
 </mat-sidenav-container>
 
+<!-- SIDEBAR -->
 <app-sidebar></app-sidebar>
-
 
 
