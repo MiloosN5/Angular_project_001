@@ -1,0 +1,25 @@
+<div class="d-flex flex-column h-100 mt-3">
+    <div class="container mb-3">
+      <div class="row text-center">
+        <a class="col-3  text-dark text-decoration-none" [routerLink]="['/shop', 'simpathy']">
+          <p class="my-category">Simpathy</p>
+          <img src="../../../assets/Resursi/category/category1.png" width="150px" class="border-bottom border-danger img-fluid">
+        </a>
+        <a class="col-3  text-dark text-decoration-none" [routerLink]="['/shop', 'anniversary']">
+          <p class="my-category">Anniversary</p>
+          <img src="../../../assets/Resursi/category/category2.png" width="150px" class="border-bottom border-danger img-fluid">
+        </a>
+        <a class="col-3  text-dark text-decoration-none" [routerLink]="['/shop', 'congratulations']" >
+          <p class="my-category">Congratulations</p>
+          <img src="../../../assets/Resursi/category/category3.png" width="150px" class="border-bottom border-danger img-fluid">
+        </a>
+        <a class="col-3 text-dark text-decoration-none" [routerLink]="['/shop', 'get-well']" >
+          <p class="my-category">Get Well</p>
+          <img src="../../../assets/Resursi/category/category4.png" width="150px" class="border-bottom border-danger img-fluid">
+        </a>
+      </div>
+    </div>
+    <div class="col-12 flex-grow-1">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
