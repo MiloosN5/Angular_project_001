@@ -22,6 +22,7 @@ import { HomeComponent } from './components/home/home.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { ShopComponent } from './components/shop/shop.component';
 import { CategoryComponent } from './components/shop/components/category/category.component';
+import { ProductsService } from './servers/products.service';
 
 
 @NgModule({
@@ -43,6 +44,7 @@ import { CategoryComponent } from './components/shop/components/category/categor
     AppRoutingModule
   ],
   providers: [
+    ProductsService
   ],
   bootstrap: [AppComponent]
 })
