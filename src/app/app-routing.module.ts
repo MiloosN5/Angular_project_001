@@ -7,7 +7,11 @@ import { ShopComponent } from "./components/shop/shop.component";
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
-  {path: 'shop/:category', component: CategoryComponent},  
+  {path: 'shop', component: ShopComponent,
+    children: [
+      { path: ':category', component: CategoryComponent}
+    ]
+  }, 
   {path: 'not-found', component: NotFoundComponent},
   {path: '**', redirectTo: "/not-found"},   
 ];
