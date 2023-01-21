@@ -21,6 +21,7 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { HomeComponent } from './components/home/home.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { ShopComponent } from './components/shop/shop.component';
+import { CategoryComponent } from './components/shop/components/category/category.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { ShopComponent } from './components/shop/shop.component';
     FooterComponent,
     SidebarComponent,
     NotFoundComponent,
-    ShopComponent
+    ShopComponent,
+    CategoryComponent
   ],
   imports: [
     BrowserModule,
