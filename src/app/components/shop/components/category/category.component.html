@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="row">
+      <a *ngFor="let product of selectedProducts" class="col-lg-4 col-md-6 col-sm-12 text-center text-decoration-none text-dark" [routerLink]="['/shop/category', product.category, product.id]">
+          <img [src]="product.imgSrc" width="300px">
+          <h4 class="fw-bold" id="my-category-name">{{product.name}}</h4>
+          <p class="fst-italic" id="my-category-price">{{product.price}}$</p>
+      </a>
+    </div>
+  </div>
+  <div class="col-12">
+    <router-outlet></router-outlet>
+  </div>
+  
+  
+  
+  
