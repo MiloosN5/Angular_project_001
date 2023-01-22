@@ -1,0 +1,49 @@
+/* PRODUCT PATH */
+#my-product-path {
+    font-size: 14px;
+}
+
+/* PREVIOS & NEXT PRODUCT */
+.my-prevnext-button {
+    font-size: 14px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.my-prevnext-button:hover {
+    background-color: lightblue;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border-radius: 0px;
+    border: 1px solid white;
+}
+
+/* PRODUCT DETAILS */
+.my-product-majorinfo {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+#my-product-description {
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+hr {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+#my-product-quantityLabel {
+    font-size: 15px;
+}
+
+#my-product-quantityInput {
+    font-size: 16px;
+    width: 100px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
