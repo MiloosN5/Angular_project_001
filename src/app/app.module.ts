@@ -22,6 +22,9 @@ import { HomeComponent } from './components/home/home.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { ShopComponent } from './components/shop/shop.component';
 import { CategoryComponent } from './components/shop/components/category/category.component';
+import { ProductComponent } from './components/shop/components/category/components/product/product.component';
+
+/* Services */
 import { ProductsService } from './servers/products.service';
 
 
@@ -34,7 +37,8 @@ import { ProductsService } from './servers/products.service';
     SidebarComponent,
     NotFoundComponent,
     ShopComponent,
-    CategoryComponent
+    CategoryComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,
