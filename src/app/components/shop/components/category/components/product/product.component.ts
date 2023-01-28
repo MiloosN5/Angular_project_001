@@ -58,11 +58,10 @@ export class ProductComponent implements OnInit {
   }
 
     /* put this product to the cart */
-    buyProduct(product: Product, quantity: string, isLogedin: boolean) {
+    buyProduct(product: Product, quantity: string) {
       /* if user enter any value in the input field, allow him to click "add to Cart" button */
       if(+quantity > 0) {
         /* if user is loggedin, then also allow him to successfully add product to the cart */
-        if(isLogedin == true) {
         let selectedProduct = new Cart(this._shoppingService.cart.length+1, product, +quantity);
         this._shoppingService.cart.push(selectedProduct);
         this._shoppingService.storeProduct(selectedProduct)
@@ -71,7 +70,6 @@ export class ProductComponent implements OnInit {
           error: (error) => console.log(error)
         })
       }
-    }
     }
 
 }
