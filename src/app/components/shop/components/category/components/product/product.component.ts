@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params, Router } from '@angular/router';
+import { Cart } from 'src/app/models/cart';
 import { Product } from 'src/app/models/product';
 import { ProductsService } from 'src/app/servers/products.service';
+import { ShoppingService } from 'src/app/servers/shopping.service';
 
 @Component({
   selector: 'app-product',
@@ -16,6 +18,7 @@ export class ProductComponent implements OnInit {
 
   constructor(
     private _productsService: ProductsService,
+    private _shoppingService: ShoppingService,
     private _route: ActivatedRoute,
     private _router: Router,
     //public dialog: MatDialog
@@ -53,6 +56,22 @@ export class ProductComponent implements OnInit {
     this.currentProduct = nextProduct[0];
     this._router.navigate(['/shop/category', this.currentProduct.category, this.currentProduct.id]);
   }
-  
+
+    /* put this product to the cart */
+    buyProduct(product: Product, quantity: string, isLogedin: boolean) {
+      /* if user enter any value in the input field, allow him to click "add to Cart" button */
+      if(+quantity > 0) {
+        /* if user is loggedin, then also allow him to successfully add product to the cart */
+        if(isLogedin == true) {
+        let selectedProduct = new Cart(this._shoppingService.cart.length+1, product, +quantity);
+        this._shoppingService.cart.push(selectedProduct);
+        this._shoppingService.storeProduct(selectedProduct)
+        .subscribe({
+          next: (response)=>console.log(response),
+          error: (error) => console.log(error)
+        })
+      }
+    }
+    }
 
 }
