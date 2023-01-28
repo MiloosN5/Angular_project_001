@@ -27,6 +27,11 @@ import { ProductComponent } from './components/shop/components/category/componen
 /* Services */
 import { ProductsService } from './servers/products.service';
 
+/* In Memory Web api mocking server */
+import { HttpClientModule } from '@angular/common/http';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryLibrary } from './servers/in-memory-library';
+
 
 @NgModule({
   declarations: [
@@ -38,7 +43,11 @@ import { ProductsService } from './servers/products.service';
     NotFoundComponent,
     ShopComponent,
     CategoryComponent,
-    ProductComponent
+    ProductComponent,
+    HttpClientModule,
+    HttpClientInMemoryWebApiModule.forRoot(
+      InMemoryLibrary, {dataEncapsulation: false}
+    ),
   ],
   imports: [
     BrowserModule,
