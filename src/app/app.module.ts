@@ -23,6 +23,7 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 import { ShopComponent } from './components/shop/shop.component';
 import { CategoryComponent } from './components/shop/components/category/category.component';
 import { ProductComponent } from './components/shop/components/category/components/product/product.component';
+import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.component';
 
 /* Services */
 import { ProductsService } from './servers/products.service';
@@ -31,6 +32,7 @@ import { ProductsService } from './servers/products.service';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryLibrary } from './servers/in-memory-library';
+import { ShoppingService } from './servers/shopping.service';
 
 
 @NgModule({
@@ -43,7 +45,8 @@ import { InMemoryLibrary } from './servers/in-memory-library';
     NotFoundComponent,
     ShopComponent,
     CategoryComponent,
-    ProductComponent
+    ProductComponent,
+    ShoppingCartComponent
   ],
   imports: [
     BrowserModule,
@@ -58,6 +61,7 @@ import { InMemoryLibrary } from './servers/in-memory-library';
   ],
   providers: [
     ProductsService,
+    ShoppingService,
     InMemoryLibrary
   ],
   bootstrap: [AppComponent]
