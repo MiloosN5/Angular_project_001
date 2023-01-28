@@ -1,0 +1,14 @@
+/* set the font size of product details */
+.my-productInfo {
+    font-size: 15px;
+}
+
+/* set the width of the input */
+#my-newQuantity {
+    width: 50px;
+}
+
+/* set the font size of warning empty cart message */
+#my-empty-cart {
+    font-size: 30px;
+}

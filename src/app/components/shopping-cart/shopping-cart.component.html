@@ -1,0 +1,49 @@
+<!-- LIST OF ADDED PRODUCTS -->
+<div *ngIf="shopp.displayProducts.length > 0" class="container mt-3">
+    <div *ngFor="let proizvod of shopp.displayProducts;let i=index;" class="border-bottom border-secondary border-opacity-50 row">
+      <div class="col-lg-6 col-12 d-flex flex-row my-productInfo my-1 px-0">
+        <div class=""><img [src]="proizvod.product.imgSrc" class="" width="110px"></div>
+        <div class="d-flex flex-column justify-content-start align-items-start px-1">
+          <p class="">{{proizvod.product.name}}</p>
+          <button class="btn btn-light text-dark my-productInfo p-0" (click)="removeIt(proizvod, confirmQuantity.value)">Remove</button>
+        </div>
+      </div>
+      <div class="col-lg-2 col-4 my-productInfo text-lg-center text-end my-1">
+        <p class="">{{proizvod.product.price}}$</p>
+      </div>
+      <div class="col-lg-2 col-4 my-productInfo text-lg-center text-end my-1">
+        <input type="number" max="99" min="1" [value]="proizvod.quantity" (change)="changeQuantity(proizvod, confirmQuantity.value)"  #confirmQuantity id="my-newQuantity">
+      </div>
+      <div class="col-lg-2 col-4 my-productInfo text-lg-center text-end my-1">
+        <p>{{proizvod.product.price*proizvod.quantity}}$</p>
+      </div>
+    </div>
+  </div>
+  <!-- TOTAL PRICES & CHECKOUT -->
+  <div *ngIf="shopp.displayProducts.length > 0" class="container text-end my-productInfo">
+  <div class="row">
+    <div class="col-6 "></div>
+    <div class="col-lg-6 col-12">
+      <div class="row">
+        <div class="col-6 p-0 text-start">
+          <p class="my-1">Subtotal:</p>
+          <p class="my-1 border-bottom border-secondary border-opacity-50">Shipping:</p>
+          <p class="my-1">Total:</p>
+        </div>
+        <div class="col-6 p-0 text-end">
+          <p class="my-1">{{subTotalUpdated}}$</p>
+          <p class="my-1 border-bottom border-secondary border-opacity-50">{{shippingUpdated}}$</p>
+          <p class="my-1">{{totalPriceUpdated}}$</p>
+          <button class="btn btn-dark text-white my-black-Button rounded-1" routerLink="/productOrder">Checkout</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  
+  <!-- ... IF CART IS EMPTY -->
+  <div *ngIf="!(shopp.displayProducts.length > 0)" class="text-center container mt-4">
+    <p class="fw-bold" id="my-empty-cart">Shopping cart is empty</p>
+  </div>
+  
+  
