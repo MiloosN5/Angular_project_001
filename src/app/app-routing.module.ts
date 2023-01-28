@@ -5,6 +5,7 @@ import { NotFoundComponent } from "./components/not-found/not-found.component";
 import { CategoryComponent } from "./components/shop/components/category/category.component";
 import { ProductComponent } from "./components/shop/components/category/components/product/product.component";
 import { ShopComponent } from "./components/shop/shop.component";
+import { ShoppingCartComponent } from "./components/shopping-cart/shopping-cart.component";
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -14,6 +15,7 @@ const routes: Routes = [
     ]
   }, 
   {path: 'shop/category/:category/:id', component: ProductComponent},
+  {path: 'cart', component: ShoppingCartComponent},
   {path: 'not-found', component: NotFoundComponent},
   {path: '**', redirectTo: "/not-found"},   
 ];
