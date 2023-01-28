@@ -43,21 +43,22 @@ import { InMemoryLibrary } from './servers/in-memory-library';
     NotFoundComponent,
     ShopComponent,
     CategoryComponent,
-    ProductComponent,
-    HttpClientModule,
-    HttpClientInMemoryWebApiModule.forRoot(
-      InMemoryLibrary, {dataEncapsulation: false}
-    ),
+    ProductComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
     MaterialModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    HttpClientInMemoryWebApiModule.forRoot(
+      InMemoryLibrary, {dataEncapsulation: false}
+    ),
   ],
   providers: [
-    ProductsService
+    ProductsService,
+    InMemoryLibrary
   ],
   bootstrap: [AppComponent]
 })
