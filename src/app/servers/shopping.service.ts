@@ -11,6 +11,9 @@ export class ShoppingService {
   /* list of products that will be displayed */
   @Input() displayProducts: Cart[] = [];
 
+  amountOfProducts: number = 0;
+  cartChange1: EventEmitter<any> = new EventEmitter();
+
   subtotalPrice: number = 0;
   cartChange2: EventEmitter<any> = new EventEmitter();
 
