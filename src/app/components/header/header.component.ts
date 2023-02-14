@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ShoppingService } from 'src/app/servers/shopping.service';
 
 @Component({
   selector: 'app-header',
@@ -7,10 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+  amountOfProducts: number = 0;
+
   constructor(
+    public shop: ShoppingService
   ) { }
 
   ngOnInit() {
+    this.shop.cartChange1.subscribe(
+      item => this.amountOfProducts = item
+    )
   }
 
 
