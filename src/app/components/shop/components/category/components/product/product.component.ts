@@ -69,6 +69,8 @@ export class ProductComponent implements OnInit {
           next: (response)=>console.log(response),
           error: (error) => console.log(error)
         })
+        this._shoppingService.amountOfProducts += +quantity; // increase amount of buyed products depending on their quantity property
+        this._shoppingService.cartChange1.emit(this._shoppingService.amountOfProducts); // emit new value for "amountOfProducts"        
       }
     }
 
