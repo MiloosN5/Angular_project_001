@@ -77,7 +77,9 @@ export class ShoppingCartComponent implements OnInit {
       },
       error: (error) => console.log(error)
     })
-    /* take care of updating prices */
+    /* take care of updating new "amountOfProducts" and prices */
+    this.shopp.amountOfProducts -= +quantity;
+    this.shopp.cartChange1.emit(this.shopp.amountOfProducts);
     this.shopp.subtotalPrice -= product.product.price;
     this.shopp.cartChange2.emit(this.shopp.subtotalPrice);
   }
@@ -85,6 +87,8 @@ export class ShoppingCartComponent implements OnInit {
   /* change the amount of product you wish to buy */
   changeQuantity(product: Cart, quantity: string){
     this.thisProduct = product; // a single product (Cart not Cart[])
+    let oldQuantity = this.thisProduct.quantity; // get the old quantity that was added by user before adding to the cart
+    let newQuantity = +quantity; // changed quantity value
     /* create new object */
     let editedProduct = {
       id: this.thisProduct.id,
@@ -101,6 +105,15 @@ export class ShoppingCartComponent implements OnInit {
         next: (response) => console.log("Quantity successfully changed of product" + editedProduct.id),
         error: (err) => console.log(err)
       });
+    }
+    /* update "amountOfProducts" according to the difference between old and new quantity */
+    if(newQuantity > oldQuantity) {
+      this.shopp.amountOfProducts += (newQuantity - oldQuantity);
+      this.shopp.cartChange1.emit(this.shopp.amountOfProducts);
+    }
+    else if(oldQuantity > newQuantity) {
+      this.shopp.amountOfProducts -= (oldQuantity - newQuantity);
+      this.shopp.cartChange1.emit(this.shopp.amountOfProducts);
     }
     /* update list of products in the cart */
     this.getProduct();
