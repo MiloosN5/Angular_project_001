@@ -27,3 +27,24 @@
     padding-left: 8px !important; 
     font-size: 10px;
   }
+
+/* background for signup & login */
+.my-loginSignup-background {
+    height: auto;
+    background-image: url(assets/Resursi/loginBackground.jpg);
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* set forgot password margins */
+.my-forgot-password {
+    margin-top: 40px !important;
+    margin-bottom: 14px !important;
+}
+
+/* error text/message set to red color */
+.my-error-2 {
+    color: red;
+    font-size: 10px;
+}
