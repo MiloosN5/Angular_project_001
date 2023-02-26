@@ -7,6 +7,7 @@ import { CategoryComponent } from "./components/shop/components/category/categor
 import { ProductComponent } from "./components/shop/components/category/components/product/product.component";
 import { ShopComponent } from "./components/shop/shop.component";
 import { ShoppingCartComponent } from "./components/shopping-cart/shopping-cart.component";
+import { SignupComponent } from "./components/signup/signup.component";
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -18,6 +19,7 @@ const routes: Routes = [
   {path: 'shop/category/:category/:id', component: ProductComponent},
   {path: 'cart', component: ShoppingCartComponent},
   {path: 'login', component: LoginComponent}, 
+  {path: 'signup', component: SignupComponent}, 
   {path: 'not-found', component: NotFoundComponent},
   {path: '**', redirectTo: "/not-found"},   
 ];
