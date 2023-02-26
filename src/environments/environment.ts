@@ -5,13 +5,12 @@
 export const environment = {
   production: false,
   firebase: {
-  apiKey: "AIzaSyCW4ooGl02kqPUteyqs5hZWAa6ELCUVDYs",
-  authDomain: "angularsertifikat5deo.firebaseapp.com",
-  databaseURL: "https://angularsertifikat5deo-default-rtdb.firebaseio.com",
-  projectId: "angularsertifikat5deo",
-  storageBucket: "angularsertifikat5deo.appspot.com",
-  messagingSenderId: "370457630259",
-  appId: "1:370457630259:web:9d998185229e06ab133546"
+    apiKey: "AIzaSyD-70YrzfUoBM1PCXw7CIgnV6Fdup3K8jA",
+    authDomain: "angular1github.firebaseapp.com",
+    projectId: "angular1github",
+    storageBucket: "angular1github.appspot.com",
+    messagingSenderId: "1036916237346",
+    appId: "1:1036916237346:web:36ce2610832d063513567b"
   }
 };
 
