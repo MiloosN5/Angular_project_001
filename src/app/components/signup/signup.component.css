@@ -1,0 +1,30 @@
+/* set font size */
+#name1, #name2, #password, #email, .form1 {
+    font-size: 15px;
+}
+
+h1 {
+    font-size: 33px;
+}
+
+#my-linkTo-logIn {
+    font-size: 13px;
+}
+
+/* set width for input & button */
+#name1, #name2, #password, #email, #my-signUp-Button {
+    width: 300px;
+}
+
+/* more setting properties for submit button */
+#my-signUp-Button {
+    font-size: 15px;
+    background-color:rgb(240, 249, 249);
+}
+
+/* set the error to be red (input border) */
+input.ng-invalid.ng-touched {
+    border: 1px solid red;
+}
+
+
