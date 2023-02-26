@@ -1,5 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { AuthService } from 'src/app/servers/auth.service';
+import { MatDialog, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 
 @Component({
@@ -11,7 +13,11 @@ export class SignupComponent implements OnInit {
 
   @ViewChild('myForm') signupForm: NgForm;
 
-  constructor() { }
+  constructor(
+    private _authService: AuthService,
+    public dialog: MatDialog,
+    private _router: Router
+  ) { }
 
   ngOnInit() {
   }
@@ -21,8 +27,12 @@ export class SignupComponent implements OnInit {
     console.log(this.signupForm);
   }
 
-}
+  /* call signup function defined in the auth service */
+  signup(email: string, pass: string){
+      this._authService.signUp(email, pass);   
+  }
 
+}
 
 
 
