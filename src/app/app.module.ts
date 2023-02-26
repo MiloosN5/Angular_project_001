@@ -25,6 +25,8 @@ import { ProductComponent } from './components/shop/components/category/componen
 import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.component';
 import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
+import { PleaseLoginMessageComponent } from './components/please-login-message/please-login-message.component';
+import { SignUpMessageComponent } from './components/sign-up-message/sign-up-message.component';
 
 /* Services */
 import { ProductsService } from './servers/products.service';
@@ -58,7 +60,9 @@ import { environment } from 'src/environments/environment';
     ProductComponent,
     ShoppingCartComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    PleaseLoginMessageComponent,
+    SignUpMessageComponent
   ],
   imports: [
     BrowserModule,
