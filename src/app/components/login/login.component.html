@@ -1,35 +1,34 @@
 <div class="container h-100">
-    <div class="row h-100">
-      <div class="col-12 d-flex flex-column align-items-center justify-content-center my-loginSignup-background">
-        <!-- HEADER -->
-        <h1 class="text-center fw-bold">Log In</h1>
-        <p class="text-center" id="my-linkTo-signup">New to this site? <a><u routerLink="/signup">Sign Up</u></a></p>
-        <!-- FORM -->
-        <form (ngSubmit)="onSubmit(myForm)" #myForm="ngForm">
-          <!-- EMAIL -->
-          <div class="form-group form1">
-            <label for="email">Email</label>
-            <input type="email" id="email" class="form-control rounded-1 p-1" ngModel name="email" required email #email="ngModel">
-            <div class="my-error-2" *ngIf="email.touched && !email.valid">
-              <p class="my-1" *ngIf="email.errors?.['required']">Email is required.</p>
-              <p class="my-1" *ngIf="!email.errors?.['required']">Email format.</p>
-            </div>
+  <div class="row h-100">
+    <div class="col-12 d-flex flex-column align-items-center justify-content-center my-loginSignup-background">
+      <!-- HEADER -->
+      <h1 class="text-center fw-bold">Log In</h1>
+      <p class="text-center" id="my-linkTo-signup">New to this site? <a><u routerLink="/signup">Sign Up</u></a></p>
+      <!-- FORM -->
+      <form (ngSubmit)="onSubmit(myForm)" #myForm="ngForm">
+        <!-- EMAIL -->
+        <div class="form-group form1">
+          <label for="email">Email</label>
+          <input type="email" id="email" class="form-control rounded-1 p-1" ngModel name="email" required email #email="ngModel">
+          <div class="my-error-2" *ngIf="email.touched && !email.valid">
+            <p class="my-1" *ngIf="email.errors?.['required']">Email is required.</p>
+            <p class="my-1" *ngIf="!email.errors?.['required']">Email format.</p>
           </div>
-          <!-- PASSWORD -->
-          <div class="form-group form1">
-            <label for="password">Password</label>
-            <input type="password" id="password" class="form-control rounded-1 p-1" ngModel name="password" required password #password="ngModel" minlength="5">
-            <div class="my-error-2" *ngIf="password.touched && !password.valid">
-              <p class="my-1" *ngIf="password.errors?.['required']" >Password is required.</p>
-              <p class="my-1" *ngIf="password.errors?.['minlength']" >Password needs at least 5 characters.</p>
-            </div>
+        </div>
+        <!-- PASSWORD -->
+        <div class="form-group form1">
+          <label for="password">Password</label>
+          <input type="password" id="password" class="form-control rounded-1 p-1" ngModel name="password" required password #password="ngModel" minlength="5">
+          <div class="my-error-2" *ngIf="password.touched && !password.valid">
+            <p class="my-1" *ngIf="password.errors?.['required']" >Password is required.</p>
+            <p class="my-1" *ngIf="password.errors?.['minlength']" >Password needs at least 5 characters.</p>
           </div>
-          <!-- HELP with PASSWORD -->
-          <p class="form1 mt-4 my-forgot-password">Forgot password?</p>
-          <!-- SUBMIT BUTTON -->
-          <button class="btn btn-primary border-0 rounded-1 text-dark p-1" type="submit" id="my-logIn-Button" [disabled]="!myForm.valid">Log In</button>
-        </form>
-      </div>
+        </div>
+        <!-- HELP with PASSWORD -->
+        <p class="form1 mt-4 my-forgot-password">Forgot password?</p>
+        <!-- SUBMIT BUTTON -->
+        <button class="btn btn-primary border-0 rounded-1 text-dark p-1" type="submit" id="my-logIn-Button" [disabled]="!myForm.valid" (click)="login(email.value, password.value)">Log In</button>
+      </form>
     </div>
   </div>
-  
+</div>
