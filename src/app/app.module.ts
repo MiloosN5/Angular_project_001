@@ -35,6 +35,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryLibrary } from './servers/in-memory-library';
 
+/* Firebase */
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFireAuthModule} from '@angular/fire/compat/auth';
+import { AngularFirestoreModule} from '@angular/fire/compat/firestore';
+import { AngularFireStorageModule} from '@angular/fire/compat/storage';
+import { AngularFireDatabaseModule} from '@angular/fire/compat/database';
+import { environment } from 'src/environments/environment';
 
 
 
@@ -63,6 +70,11 @@ import { InMemoryLibrary } from './servers/in-memory-library';
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryLibrary, {dataEncapsulation: false}
     ),
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule,
+    AngularFirestoreModule,
+    AngularFireStorageModule,
+    AngularFireDatabaseModule,
   ],
   providers: [
     ProductsService,
