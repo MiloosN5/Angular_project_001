@@ -24,6 +24,7 @@ import { CategoryComponent } from './components/shop/components/category/categor
 import { ProductComponent } from './components/shop/components/category/components/product/product.component';
 import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.component';
 import { LoginComponent } from './components/login/login.component';
+import { SignupComponent } from './components/signup/signup.component';
 
 /* Services */
 import { ProductsService } from './servers/products.service';
@@ -33,6 +34,7 @@ import { ShoppingService } from './servers/shopping.service';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryLibrary } from './servers/in-memory-library';
+
 
 
 
@@ -48,7 +50,8 @@ import { InMemoryLibrary } from './servers/in-memory-library';
     CategoryComponent,
     ProductComponent,
     ShoppingCartComponent,
-    LoginComponent
+    LoginComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
