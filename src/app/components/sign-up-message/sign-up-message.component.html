@@ -1,0 +1,17 @@
+<div  mat-dialog-content class="d-flex flex-column justify-content-center align-items-center">
+    <h3 class="mb-3 fw-bold text-center" id="my-signupmssg-title">
+        Thank You for Registering
+    </h3>
+    <div class="text-center h-auto" >
+        <p>We have sent a confirmation email to your email.</p>
+        <p>Plase check your email and click to the link to verify your email address.</p>
+    </div>
+    <div class="text-center h-auto">
+        <button class="my-black-Button btn btn-dark rounded-1 mb-2 me-3" (click)="sendVerificationEmail()">
+            Resend Verification Email
+        </button>
+        <button class="my-black-Button btn btn-dark rounded-1 mb-2" mat-button matDialogClose="yes">LOGIN</button>
+    </div>
+</div>
+
+

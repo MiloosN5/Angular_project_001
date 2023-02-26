@@ -1,0 +1,28 @@
+/* setting dialog box */
+::ng-deep .mat-dialog-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    padding: 38px !important;
+    max-width: 90% !important;
+    width: 500px !important;
+    height: auto !important; 
+    left: 0 !important;
+    right: 0 !important;
+    top: 90px !important;
+    position: absolute !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+} 
+
+::ng-deep .mat-dialog-content {
+    padding: 0px !important;
+    margin: 0px !important;
+}
+
+/* set font size & margin */
+#my-loginmssg-title {
+    font-size: 26px;
+    margin-bottom: 12px !important;
+}    
