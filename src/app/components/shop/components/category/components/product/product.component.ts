@@ -4,6 +4,7 @@ import { ActivatedRoute, Params, Router } from '@angular/router';
 import { PleaseLoginMessageComponent } from 'src/app/components/please-login-message/please-login-message.component';
 import { Cart } from 'src/app/models/cart';
 import { Product } from 'src/app/models/product';
+import { AuthService } from 'src/app/servers/auth.service';
 import { ProductsService } from 'src/app/servers/products.service';
 import { ShoppingService } from 'src/app/servers/shopping.service';
 
@@ -23,6 +24,7 @@ export class ProductComponent implements OnInit {
     private _shoppingService: ShoppingService,
     private _route: ActivatedRoute,
     private _router: Router,
+    public authService: AuthService,
     public dialog: MatDialog
   ) { }
 
