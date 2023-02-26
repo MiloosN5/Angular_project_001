@@ -1,36 +1,35 @@
 <!-- HEADER -->
 <div class="container mt-3 mb-2">
-    <div class="row">
-      <!-- PATH OF THE PRODUCT -->
-      <div class="col-lg-6 col-md-12 text-start" id="my-product-path">Home/Shop/{{this.currentProduct.category}}/{{this.currentProduct.name}}</div>
-      <!-- PREVIOUS & NEXT PRODUCT -->
-      <div class="col-lg-6 col-md-12 text-end">
-        &lt; 
-        <button class="btn btn-light my-prevnext-button" [routerLink]="['/shop/category', currentProduct.category, currentProduct.id]" [disabled]="!(currentProduct.id > 0)" (click)="previousProduct(currentProduct.id-1)">Prev</button> 
-        &#124;
-        <button class="btn btn-light my-prevnext-button" [routerLink]="['/shop/category', currentProduct.category, currentProduct.id]" [disabled]="currentProduct.id > 24" (click)="nextProduct(currentProduct.id+1)">Next</button> 
-        &gt; 
-      </div>
+  <div class="row">
+    <!-- PATH OF THE PRODUCT -->
+    <div class="col-lg-6 col-md-12 text-start" id="my-product-path">Home/Shop/{{this.currentProduct.category}}/{{this.currentProduct.name}}</div>
+    <!-- PREVIOUS & NEXT PRODUCT -->
+    <div class="col-lg-6 col-md-12 text-end">
+      &lt; 
+      <button class="btn btn-light my-prevnext-button" [routerLink]="['/shop/category', currentProduct.category, currentProduct.id]" [disabled]="!(currentProduct.id > 0)" (click)="previousProduct(currentProduct.id-1)">Prev</button> 
+      &#124;
+      <button class="btn btn-light my-prevnext-button" [routerLink]="['/shop/category', currentProduct.category, currentProduct.id]" [disabled]="currentProduct.id > 24" (click)="nextProduct(currentProduct.id+1)">Next</button> 
+      &gt; 
     </div>
   </div>
-  <!-- PRODUCT DETAILS -->
-  <div class="container">
-    <div class="row ">
-      <div class="col-lg-6 col-md-12 col-sm-12 text-center text-lg-end mb-3"><img [src]="currentProduct.imgSrc" width="300px"></div>
-      <div class="col-lg-6 col-md-12 col-sm-12">
-        <p class="fw-bold my-product-majorinfo">{{currentProduct.name}}</p>
-        <p class="fw-bold my-product-majorinfo">{{currentProduct.price}}</p>
-        <p id="my-product-description">{{currentProduct.description}}</p>
-        <hr/>
-        <label id="my-product-quantityLabel">Quantity</label><br/>
-        <input type="number" min="1" max="99" class="border border-1 border-secondary border-opacity-50" #quantity id="my-product-quantityInput" [(ngModel)]="quantityValue"><br/>
-        <!-- ADD PRODUCT TO CART -->
-        <button class="btn btn-dark text-white my-black-Button rounded-1" [disabled]="!quantityValue" (click)="buyProduct(currentProduct, quantity.value)">Add to cart</button>
-      </div>
+</div>
+<!-- PRODUCT DETAILS -->
+<div class="container">
+  <div class="row ">
+    <div class="col-lg-6 col-md-12 col-sm-12 text-center text-lg-end mb-3"><img [src]="currentProduct.imgSrc" width="300px"></div>
+    <div class="col-lg-6 col-md-12 col-sm-12">
+      <p class="fw-bold my-product-majorinfo">{{currentProduct.name}}</p>
+      <p class="fw-bold my-product-majorinfo">{{currentProduct.price}}</p>
+      <p id="my-product-description">{{currentProduct.description}}</p>
+      <hr/>
+      <label id="my-product-quantityLabel">Quantity</label><br/>
+      <input type="number" min="1" max="99" class="border border-1 border-secondary border-opacity-50" #quantity id="my-product-quantityInput" [(ngModel)]="quantityValue"><br/>
+      <!-- ADD PRODUCT TO CART -->
+      <button class="btn btn-dark text-white my-black-Button rounded-1" [disabled]="!quantityValue" (click)="buyProduct(currentProduct, quantity.value, authService.isLoggedIn)">Add to cart</button>
     </div>
   </div>
-  
-  
-  
-  
-  
+</div>
+
+
+
+

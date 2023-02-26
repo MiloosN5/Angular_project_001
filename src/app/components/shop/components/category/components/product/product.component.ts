@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { ActivatedRoute, Params, Router } from '@angular/router';
+import { PleaseLoginMessageComponent } from 'src/app/components/please-login-message/please-login-message.component';
 import { Cart } from 'src/app/models/cart';
 import { Product } from 'src/app/models/product';
 import { ProductsService } from 'src/app/servers/products.service';
@@ -21,7 +23,7 @@ export class ProductComponent implements OnInit {
     private _shoppingService: ShoppingService,
     private _route: ActivatedRoute,
     private _router: Router,
-    //public dialog: MatDialog
+    public dialog: MatDialog
   ) { }
 
   ngOnInit(): void {
@@ -57,21 +59,32 @@ export class ProductComponent implements OnInit {
     this._router.navigate(['/shop/category', this.currentProduct.category, this.currentProduct.id]);
   }
 
-    /* put this product to the cart */
-    buyProduct(product: Product, quantity: string) {
-      /* if user enter any value in the input field, allow him to click "add to Cart" button */
-      if(+quantity > 0) {
-        /* if user is loggedin, then also allow him to successfully add product to the cart */
-        let selectedProduct = new Cart(this._shoppingService.cart.length+1, product, +quantity);
-        this._shoppingService.cart.push(selectedProduct);
-        this._shoppingService.storeProduct(selectedProduct)
-        .subscribe({
-          next: (response)=>console.log(response),
-          error: (error) => console.log(error)
-        })
-        this._shoppingService.amountOfProducts += +quantity; // increase amount of buyed products depending on their quantity property
-        this._shoppingService.cartChange1.emit(this._shoppingService.amountOfProducts); // emit new value for "amountOfProducts"        
-      }
+   /* put this product to the cart */
+   buyProduct(product: Product, quantity: string, isLogedin: boolean) {
+    /* if user enter any value in the input field, allow him to click "add to Cart" button */
+    if(+quantity > 0) {
+      /* if user is loggedin, then also allow him to successfully add product to the cart */
+      if(isLogedin == true) {
+      let selectedProduct = new Cart(this._shoppingService.cart.length+1, product, +quantity);
+      this._shoppingService.cart.push(selectedProduct);
+      this._shoppingService.storeProduct(selectedProduct)
+      .subscribe({
+        next: (response)=>console.log(response),
+        error: (error) => console.log(error)
+      })
+      this._shoppingService.amountOfProducts += +quantity; // increase amount of buyed products depending on their quantity property
+      this._shoppingService.cartChange1.emit(this._shoppingService.amountOfProducts); // emit new value for "amountOfProducts"
     }
+    /* if user is not loggedin, warn him */
+    else {
+      const dialogRef = this.dialog.open(PleaseLoginMessageComponent);
+      dialogRef.afterClosed().subscribe(result => {
+        if(result === "yes") {
+          this._router.navigate(['login']);
+        }
+      });
+    }
+  }
+  }
 
 }
