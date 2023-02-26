@@ -10,7 +10,6 @@ import { FormsModule } from '@angular/forms';
 /* Module for Angular Material */
 import { MaterialModule } from './material.module';
 
-
 /* for Routers */
 import { AppRoutingModule } from './app-routing.module';
 
@@ -24,15 +23,17 @@ import { ShopComponent } from './components/shop/shop.component';
 import { CategoryComponent } from './components/shop/components/category/category.component';
 import { ProductComponent } from './components/shop/components/category/components/product/product.component';
 import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.component';
+import { LoginComponent } from './components/login/login.component';
 
 /* Services */
 import { ProductsService } from './servers/products.service';
+import { ShoppingService } from './servers/shopping.service';
 
 /* In Memory Web api mocking server */
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryLibrary } from './servers/in-memory-library';
-import { ShoppingService } from './servers/shopping.service';
+
 
 
 @NgModule({
@@ -46,7 +47,8 @@ import { ShoppingService } from './servers/shopping.service';
     ShopComponent,
     CategoryComponent,
     ProductComponent,
-    ShoppingCartComponent
+    ShoppingCartComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
