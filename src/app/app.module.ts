@@ -31,6 +31,7 @@ import { SignUpMessageComponent } from './components/sign-up-message/sign-up-mes
 /* Services */
 import { ProductsService } from './servers/products.service';
 import { ShoppingService } from './servers/shopping.service';
+import { AuthService } from './servers/auth.service';
 
 /* In Memory Web api mocking server */
 import { HttpClientModule } from '@angular/common/http';
@@ -83,7 +84,8 @@ import { environment } from 'src/environments/environment';
   providers: [
     ProductsService,
     ShoppingService,
-    InMemoryLibrary
+    InMemoryLibrary,
+    AuthService
   ],
   bootstrap: [AppComponent]
 })
