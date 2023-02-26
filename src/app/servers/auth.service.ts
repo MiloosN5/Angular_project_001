@@ -4,6 +4,7 @@ import {AngularFireAuth} from '@angular/fire/compat/auth';
 import { Router } from '@angular/router';
 import { User } from '../models/User';
 import { MatDialog } from '@angular/material/dialog';
+import { SignUpMessageComponent } from '../components/sign-up-message/sign-up-message.component';
 
 @Injectable({
   providedIn: 'root'
