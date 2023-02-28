@@ -20,9 +20,16 @@
         <!-- More options (User, login and Shopping icons)-->
         <div class=" dropdown d-flex flex-row justify-content-lg-end justify-content-md-start" id="my-nav-right">
           <a id="my-loginHeader" class="d-flex align-items-center text-decoration-none text-dark align-middle">
-              <div class="nav-item my-0 me-2">
-                  <a class="nav-link" routerLink="/login">Login</a>
+            <ng-template [ngIf]="authService.isLoggedIn">
+              <div class="nav-item my-0 mx-2">
+                  <a class="nav-link" (click)="authService.signOut()">Logout</a>
               </div>
+            </ng-template>
+            <ng-template [ngIf]="!authService.isLoggedIn">
+                <div class="nav-item my-0 mx-2">
+                    <a class="nav-link" routerLink="/sign-in">Login</a>
+                </div>
+            </ng-template>
           </a>
           <a class="text-dark " routerLink="/cart">
             <i class="fa fa-shopping-cart" aria-hidden="true"></i><mat-icon matBadge="{{amountOfProducts}}"></mat-icon>
