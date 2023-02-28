@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from 'src/app/servers/auth.service';
 import { ShoppingService } from 'src/app/servers/shopping.service';
 
 @Component({
@@ -11,7 +12,8 @@ export class HeaderComponent implements OnInit {
   amountOfProducts: number = 0;
 
   constructor(
-    public shop: ShoppingService
+    public shop: ShoppingService,
+    public authService: AuthService
   ) { }
 
   ngOnInit() {
