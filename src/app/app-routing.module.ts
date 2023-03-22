@@ -3,6 +3,7 @@ import { RouterModule, Routes } from "@angular/router";
 import { HomeComponent } from "./components/home/home.component";
 import { LoginComponent } from "./components/login/login.component";
 import { NotFoundComponent } from "./components/not-found/not-found.component";
+import { ProductOrderComponent } from "./components/product-order/product-order.component";
 import { CategoryComponent } from "./components/shop/components/category/category.component";
 import { ProductComponent } from "./components/shop/components/category/components/product/product.component";
 import { ShopComponent } from "./components/shop/shop.component";
@@ -21,6 +22,7 @@ const routes: Routes = [
   {path: 'cart', component: ShoppingCartComponent, canActivate: [AuthGuard]},
   {path: 'login', component: LoginComponent}, 
   {path: 'signup', component: SignupComponent}, 
+  {path: 'productOrder', component: ProductOrderComponent},
   {path: 'not-found', component: NotFoundComponent},
   {path: '**', redirectTo: "/not-found"},   
 ];
