@@ -5,7 +5,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 
 /* for Forms */
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 /* Module for Angular Material */
 import { MaterialModule } from './material.module';
@@ -73,6 +73,7 @@ import { environment } from 'src/environments/environment';
     FormsModule,
     MaterialModule,
     AppRoutingModule,
+    ReactiveFormsModule,
     HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryLibrary, {dataEncapsulation: false}
