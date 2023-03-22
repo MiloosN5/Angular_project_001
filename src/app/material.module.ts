@@ -4,6 +4,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSidenavModule} from '@angular/material/sidenav';
 import {MatBadgeModule} from '@angular/material/badge';
 import { MatDialogModule } from "@angular/material/dialog";
+import { MatSelectModule} from '@angular/material/select';
 
  @NgModule({
    imports: [
@@ -11,7 +12,8 @@ import { MatDialogModule } from "@angular/material/dialog";
       MatFormFieldModule,
       MatSidenavModule,
       MatBadgeModule,
-      MatDialogModule
+      MatDialogModule,
+      MatSelectModule
    ],
    exports: [
       MatInputModule,
