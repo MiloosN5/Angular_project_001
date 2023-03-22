@@ -1,0 +1,78 @@
+/* set all elements font size to the same number */
+* {
+    font-size: 15px;
+  }
+
+/* form & input settings */
+
+  .example-form {
+    min-width: 150px;
+    max-width: 800px;
+    width: 100%;
+  }
+
+  .example-full-width {
+    width: 100%;
+  }
+
+  .my-input * {
+    padding: 0;
+    margin: 0;
+  }
+
+/* submit button */
+
+  .my-black-Button2 {
+    font-size: 15px !important;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 45px;
+    padding-right: 45px;
+}
+
+/* setting/changing some input properties */
+    ::ng-deep .mat-form-field-wrapper{
+      margin-bottom: -0.7em;
+    }
+  
+    ::ng-deep .mat-focused .mat-form-field-label {
+      color: black !important;
+      margin-top: 4px !important;
+    }
+  
+    ::ng-deep.mat-form-field-underline {
+      background-color: rgb(204, 204, 204) !important;
+    } 
+    
+    ::ng-deep.mat-form-field-ripple {
+      background-color: black !important;
+    }  
+  
+    ::ng-deep .mat-form-field-label{
+      color:black !important;
+      padding-left: 10px;
+      top: 1em !important;   
+    }
+
+    ::ng-deep .mat-form-field-infix > input {
+      padding-left: 8px !important;
+      margin-bottom: 0px !important;
+
+    }
+
+    ::ng-deep .mat-form-field-infix > textarea {
+      padding-left: 8px !important;
+      margin-bottom: 0px !important;
+
+    }
+
+    ::ng-deep .mat-form-field-flex {
+      line-height: 1.7 !important;
+    }
+
+    ::ng-deep .mat-select {
+      padding-left: 8px !important;       
+    }
+
+    
+

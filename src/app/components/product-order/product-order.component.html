@@ -1,0 +1,68 @@
+<div class="container d-flex justify-content-center">
+    <div class="col-lg-6 col-12">
+      <!-- FORM -->
+      <form class="example-form text-center" [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+        <!-- FIRST NAME -->
+        <mat-form-field class="example-full-width my-0 py-0 col-6 my-input form-group">
+          <input matInput placeholder="First Name" id="firstName" type="text" class="mb-1 col-6 form-control"  name="firstName" formControlName="firstName">
+          <span class="my-error-red" *ngIf="!signupForm.controls['firstName'].valid && signupForm.controls['firstName'].touched">
+            <ng-container *ngIf="signupForm.controls['firstName'].errors?.['required']">First Name must be filled.</ng-container>
+            <ng-container *ngIf="signupForm.controls['firstName'].errors?.['minlength']">First Name must be min 5 char...</ng-container>
+          </span>
+        </mat-form-field>
+        <br/>
+        <!-- LAST NAME -->
+        <mat-form-field class="example-full-width my-0 py-0 col-6 my-input form-group">
+          <input  matInput placeholder="Last Name" id="lastName" type="text" class="mb-1 col-6 form-control"  name="lastName" formControlName="lastName">
+          <span class="my-error-red" *ngIf="!signupForm.controls['lastName'].valid && signupForm.controls['lastName'].touched">
+            <ng-container *ngIf="signupForm.controls['lastName'].errors?.['required']">Last Name must be filled.</ng-container>
+            <ng-container *ngIf="signupForm.controls['lastName'].errors?.['minlength']">Last Name must be min 5 char...</ng-container>
+          </span>
+        </mat-form-field>
+        <br/> 
+        <!-- EMAIL -->
+        <mat-form-field class="example-full-width my-0 py-0 col-6 my-input form-group">
+          <input matInput placeholder="Email" id="email" type="email" class="mb-1 col-6 form-control"  name="email" formControlName="email">
+          <span class="my-error-red" *ngIf="!signupForm.controls['email'].valid && signupForm.controls['email'].touched">
+            <ng-container *ngIf="signupForm.controls['email'].errors?.['required']">Email must be filled.</ng-container>
+            <ng-container *ngIf="!signupForm.controls['email'].errors?.['required']">Email must be valid.</ng-container>
+          </span>
+        </mat-form-field>
+        <br/>
+        <!-- PHONE NUMBER -->
+        <mat-form-field class="example-full-width my-0 py-0 col-6 my-input form-group">
+          <input matInput placeholder="Phone Number" id="phoneNumber" type="number" class="mb-1 col-6 form-control"  name="phoneNumber" formControlName="phoneNumber" >
+          <span class="my-error-red" *ngIf="!signupForm.controls['phoneNumber'].valid && signupForm.controls['phoneNumber'].touched">
+            <ng-container *ngIf="signupForm.controls['phoneNumber'].errors?.['required']">Phone Number must be filled.</ng-container>
+            <ng-container *ngIf="signupForm.controls['phoneNumber'].errors?.['min'] || signupForm.controls['phoneNumber'].errors?.['max']">Phone Number must be valid.</ng-container>
+          </span>
+        </mat-form-field>
+        <br/>
+        <!-- ADDRESS -->
+        <mat-form-field class="example-full-width my-0 py-0 my-input form-group">
+          <input matInput placeholder="Address" id="address" type="text" class="mb-1 form-control" name="address" formControlName="address">
+          <span class="my-error-red" *ngIf="!signupForm.controls['address'].valid && signupForm.controls['address'].touched">
+            <ng-container *ngIf="signupForm.controls['address'].errors?.['required']">Address must be filled.</ng-container>
+          </span>
+        </mat-form-field>
+        <br/>
+        <!-- COMMENT -->
+        <mat-form-field class="example-full-width form-group">
+          <textarea matInput placeholder="Comment" id="comment" class="mb-2 form-control" name="comment" formControlName="comment"></textarea>
+        </mat-form-field>
+        <br/>
+        <!-- SELECT -->
+        <mat-form-field class="example-full-width form-group">
+          <mat-label>Payment method</mat-label>
+          <mat-select placeholder="Favourite" formControlName="payment">
+            <mat-option value="value1">Credit card</mat-option>
+            <mat-option value="value2">PayPal</mat-option>
+            <mat-option value="value3">Payment on Delivery</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <br/>
+        <!-- SUBMIT BUTTON -->
+        <button class="btn btn-dark rounded-0 my-black-Button2" [disabled]="!signupForm.valid" type="submit">Confirm</button>
+      </form>
+    </div>
+  </div>
