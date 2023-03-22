@@ -20,7 +20,8 @@ import { MatSelectModule} from '@angular/material/select';
       MatFormFieldModule,
       MatSidenavModule,
       MatBadgeModule,
-      MatDialogModule
+      MatDialogModule,
+      MatSelectModule
    ],    
    providers: [],
  })
