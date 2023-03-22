@@ -27,6 +27,7 @@ import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { PleaseLoginMessageComponent } from './components/please-login-message/please-login-message.component';
 import { SignUpMessageComponent } from './components/sign-up-message/sign-up-message.component';
+import { ProductOrderComponent } from './components/product-order/product-order.component';
 
 /* Services */
 import { ProductsService } from './servers/products.service';
@@ -63,7 +64,8 @@ import { environment } from 'src/environments/environment';
     LoginComponent,
     SignupComponent,
     PleaseLoginMessageComponent,
-    SignUpMessageComponent
+    SignUpMessageComponent,
+    ProductOrderComponent
   ],
   imports: [
     BrowserModule,
