@@ -1,0 +1,87 @@
+/** LEADING/HEADER **/
+
+    /* set the background (flower) */
+    #my-about-background {
+        height: 400px;
+        background-image: url(../../../assets/Resursi/MACRO_PLP_BANNER.jpg);
+        background-size: 100% auto;
+        background-position: center;
+        background-repeat: no-repeat;
+        color: white;
+    }
+
+/* text in the lead */
+    #my-about-title1 + p {
+        max-width: 90%;
+        width: 1150px;
+        margin-bottom: 0px !important;
+    }
+
+/** SETTINGS **/
+
+/* set titles (three kinds) */
+    #my-about-title1 {
+        font-size: 36px;
+        margin-top: 20px;
+        padding-top: 0px;
+        margin-bottom: 20px;
+        padding-bottom: 0px;
+    }
+
+    #my-about-title2 {
+        font-size: 28px;
+        margin-top: 20px;
+        padding-top: 0px;
+        margin-bottom: 10px;
+        padding-bottom: 0px;
+    }
+
+    .my-about-title3 {
+        font-size: 26px;
+        padding-top: 0px;
+        margin-top: 25px;
+        padding-bottom: 0px;
+        margin-bottom: 35px;
+    }
+
+/* set the regular text */
+    .my-about-text {
+        font-size: 15px;
+    }
+
+/* horizontal line */
+    hr {
+        margin-top: 15px !important;
+        margin-bottom: 15px !important;
+    }
+
+/* question paragraph */
+    .my-about-title3 + p {
+        height: auto;
+    }
+
+/* set the blank space after the question */
+    .my-about-space {
+        margin-bottom: 60px;
+    }
+
+/** RESPONSIVE **/
+
+@media (max-width: 730px) {
+    #my-about-background {
+        height: auto;
+        background-size: auto 100%;
+    }    
+}
+
+@media (max-width: 1400px) {
+    .my-about-title3 + p {
+        height: 45px;
+    }    
+}
+
+@media (max-width: 768px) {
+    .my-about-title3 + p {
+        height: auto;
+    }    
+}
