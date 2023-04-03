@@ -28,6 +28,7 @@ import { SignupComponent } from './components/signup/signup.component';
 import { PleaseLoginMessageComponent } from './components/please-login-message/please-login-message.component';
 import { SignUpMessageComponent } from './components/sign-up-message/sign-up-message.component';
 import { ProductOrderComponent } from './components/product-order/product-order.component';
+import { AboutComponent } from './components/about/about.component';
 
 /* Services */
 import { ProductsService } from './servers/products.service';
@@ -47,8 +48,6 @@ import { AngularFireStorageModule} from '@angular/fire/compat/storage';
 import { AngularFireDatabaseModule} from '@angular/fire/compat/database';
 import { environment } from 'src/environments/environment';
 
-
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -65,7 +64,8 @@ import { environment } from 'src/environments/environment';
     SignupComponent,
     PleaseLoginMessageComponent,
     SignUpMessageComponent,
-    ProductOrderComponent
+    ProductOrderComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
